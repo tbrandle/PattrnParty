@@ -1,0 +1,232 @@
+/********************** GENERAL ********************/
+
+body,
+html {
+  height : 100%;
+}
+
+body * {
+  font-family : 'Open Sans',
+                sans-serif;
+}
+
+/********************** HEADER ********************/
+
+.header {
+  display          : flex;
+  background-color : #2a1f30;
+  justify-content  : space-between;
+}
+
+.logo {
+  margin      : 10px;
+  color       : #d1d2d3;
+  font-size   : 18px;
+  font-weight : 300;
+}
+
+.student-name {
+  margin    : 10px;
+  color     : #d1d2d3;
+  font-size : 18px;
+}
+
+.logo-span {
+  color : #34d1d1;
+}
+
+/********************** ACCORDAIN SECTION ********************/
+
+
+.accordian-wrapper {
+  width  : 75%;
+  margin : 15px auto;
+}
+
+.style-title {
+  margin     : 20px 0;
+  text-align : center;
+}
+
+.style-title:after {
+  content         : '';
+  display         : inline-flex;
+  width           : 65%;
+  height          : 4px;
+  margin-left     : 13px;
+  border-top      : 1px #D1D2D3 solid;
+  justify-content : center;
+}
+
+.accordian-wrapper:after {
+  content : '';
+  display : flex;
+  width   : 100%;
+  height  : 74vh;
+}
+
+/******* tab-section *******/
+
+.tabs-section {
+  display          : flex;
+  position         : relative;
+  background-color : #F2F2F2;
+  justify-content  : space-between;
+}
+
+.tab {
+  display             : flex;
+  width               : 100%;
+  height              : 36px;
+  color               : #D1D2D3;
+  border              : 1px white solid;
+  border-bottom-color : #D1D2D3;
+  align-items         : center;
+  justify-content     : center;
+}
+
+article,
+span {
+  pointer-events : none;
+}
+
+.selected-tab {
+  color               : #666666;
+  border              : 1px #D1D2D3 solid;
+  border-bottom-color : white;
+  background-color    : white;
+}
+
+/* ****** tab-content ****** */
+
+article[hidden] {
+  display : none;
+}
+
+.tab-content {
+  display          : flex;
+  position         : absolute;
+  top              : 38px;
+  left             : 0;
+  width            : 74.8vw;
+  border           : 1px #D1D2D3 solid;
+  border-top       : none;
+  background-color : white;
+  align-items      : center;
+  justify-content  : space-between;
+}
+
+.img {
+  width : 280px;
+  padding-left: 18px;
+}
+
+.content {
+  width   : 100%;
+  padding : 13px 20px;
+}
+
+.article-title {
+  padding-bottom : 13px;
+  border-bottom  : 1px lightgrey solid;
+  font-weight    : 600;
+}
+
+/* ****** button / pseudo ****** */
+
+.view-source {
+  width            : 138px;
+  height           : 38px;
+  margin           : 50px 43%;
+  color            : #D1D2D3;
+  border           : none;
+  background-color : #2F2235;
+}
+
+.tab:hover {
+  cursor : pointer;
+}
+
+button:hover {
+  cursor : pointer;
+}
+
+/********************** MEDIA QUERIES ********************/
+
+
+@media (max-width: 814px) {
+  .accordian-wrapper:after {
+    height : 0px;
+  }
+
+  .header {
+    align-items    : center;
+    flex-direction : column;
+  }
+
+  .logo {
+    margin-bottom : 0;
+    font-size     : 34px;
+  }
+
+  .tabs-section {
+    border         : 1px #D1D2D3 solid;
+    flex-direction : column;
+  }
+
+  .tab {
+    box-sizing          : border-box;
+    padding             : 28px;
+    border-bottom-color : white;
+    font-size           : 24px;
+    flex-grow           : 1;
+    justify-content     : space-between;
+  }
+
+  .tab:after {
+    content   : '+';
+    display   : flex;
+    font-size : 32px;
+  }
+
+  .selected-tab:before {
+    content       : '-';
+    display       : inline-block;
+    float         : right;
+    padding-right : 32px;
+    font-size     : 32px;
+  }
+
+  .selected-tab {
+    display     : block;
+    height      : 100%;
+    padding     : 0;
+    padding-top : 13px;
+    border      : none;
+  }
+
+  .selected-tab .tab-title {
+    padding-left : 28px;
+  }
+
+  .tab-content {
+    box-sizing     : border-box;
+    position       : inherit;
+    width          : 100%;
+    margin-top     : 20px;
+    border         : none;
+    font-size      : 24px;
+    flex-direction : column;
+  }
+
+  .content {
+    box-sizing : border-box;
+    padding    : 10px 25px;
+  }
+
+  .img {
+    width  : 100%;
+    margin : 0;
+    padding: 0;
+  }
+}

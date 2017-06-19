@@ -1,0 +1,46 @@
+/* ******************** FLEXIBLE CARD SECTION ******************* */
+
+.flexible-cards-section {
+  display         : flex;
+  width           : 75%;
+  margin          : auto;
+  flex-wrap       : wrap;
+  justify-content : space-between;
+}
+
+.img-container {
+  height              : 78%;
+  background-image    : url("placeholder.png");
+  background-repeat   : no-repeat;
+  background-position : center;
+  background-size     : 100% 100%;
+}
+
+.card {
+  width  : 32.2%;
+  height : 211px;
+  margin : 4px 0;
+  border : 1px lightgrey solid;
+}
+
+.card-grow {
+  width : 66%;
+}
+
+.card-title {
+  margin        : 0;
+  padding       : 11px;
+  border-bottom : 1px lightgrey solid;
+}
+
+/* ******************** MEDIA QUERIES ******************* */
+
+@media (max-width: 620px) {
+  .flexible-cards-section {
+    flex-direction : column;
+  }
+
+  .card {
+    width : 100%;
+  }
+}

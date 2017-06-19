@@ -1,0 +1,29 @@
+.header-bar-section {
+  display          : flex;
+  width            : 75%;
+  height           : 76px;
+  margin           : auto;
+  background-color : #d1d2d3;
+  align-items      : center;
+  justify-content  : space-around;
+}
+
+.circle-img{
+  height: 70%;
+}
+
+.navigation-link{
+  text-decoration: none;
+  color: #666;
+}
+
+.search-wrapper{
+    background-color: white;
+    padding: 0 10px;
+}
+
+.search{
+  border: none;
+  height: 34px;
+  padding-left: 7px;
+}
