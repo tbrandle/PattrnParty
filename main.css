@@ -10,6 +10,10 @@ body * {
                 sans-serif;
 }
 
+.source-code-wrapper {
+  padding: 0 21px;
+}
+
 /********************** HEADER ********************/
 
 .header {
