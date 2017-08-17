@@ -191,6 +191,7 @@ button:hover {
     content   : '+';
     display   : flex;
     font-size : 32px;
+    color: white;
   }
 
   .selected-tab:before {
