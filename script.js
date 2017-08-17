@@ -8,6 +8,12 @@ $('.tab').on('click', (e) => {
   $(`#${nextContentId}`).removeAttr('hidden')
 })
 
+$('.dropdown-menu').on('click', () => {
+  $('.header-bar-section').children('.nav-link-wrapper').toggleClass('show-dropdown')
+})
+
+
+/***************** VIEW SOURCE ***************/
 
 $('.view-source-accordian').on('click', () => {
   if (!$('.view-source-accordian-container').children().hasClass('cp_embed_wrapper')) {
